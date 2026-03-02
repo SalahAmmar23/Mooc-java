@@ -15,6 +15,6 @@ This repository contains my solutions for:
 
 ## About
 
-I completed these exercises as part of my preparation to become a **Backend Java Developer** focusing on Spring Boot and clean code.
+I completed these exercises as part of my preparation to become a **java Developer** focusing on Spring Boot and clean code.
 
 All exercises were completed using the TMC (Test My Code) system.
