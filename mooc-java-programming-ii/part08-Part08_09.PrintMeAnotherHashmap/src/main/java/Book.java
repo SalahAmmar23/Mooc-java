@@ -14,23 +14,22 @@ public class Book {
     public String getName() {
         return this.name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
 
+    
     public int getPublicationYear() {
         return this.publicationYear;
     }
-
     public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
 
+
     public String getContents() {
         return this.contents;
     }
-
     public void setContents(String contents) {
         this.contents = contents;
     }
