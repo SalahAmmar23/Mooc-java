@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Item {
 
@@ -19,6 +20,28 @@ public class Item {
 
     public int getWeight() {
         return weight;
+    }
+
+    public boolean equals(Object compared) {
+        if(this == compared){
+            return true;
+        }
+
+        if(compared == null){
+            return false;
+        }
+
+        if(!(compared instanceof Item)){
+            return false;
+        }
+
+        Item other = (Item) compared;
+
+        return other.name.equals(this.name);
+    }
+
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
 }
