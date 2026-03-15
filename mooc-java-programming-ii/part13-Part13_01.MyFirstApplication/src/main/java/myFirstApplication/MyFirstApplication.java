@@ -1,11 +1,21 @@
 package myFirstApplication;
 
 
-public class MyFirstApplication {
+import javafx.application.Application;
+import javafx.stage.Stage;
+public class MyFirstApplication extends Application {
     
 
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    
+    @Override
+    public void start(Stage stage) {
+        stage.setTitle("My first application"); // set window title
+        stage.show(); // show the window
     }
+
+    public static void main(String[] args) {
+        launch(); // start JavaFX
+    }
+    
 
 }
