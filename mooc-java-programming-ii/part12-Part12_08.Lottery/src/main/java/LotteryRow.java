@@ -20,11 +20,19 @@ public class LotteryRow {
         this.numbers = new ArrayList<>();
         // Implement the random number generation here
         // the method containsNumber is probably useful
+        Random testobject = new Random();
+        for(int i =0; i < 7; ){
+            int randomenumber = testobject.nextInt(40) +1 ;
+            if(!containsNumber(randomenumber)){
+                numbers.add(randomenumber);
+                i++;
+            }
+        }
     }
 
     public boolean containsNumber(int number) {
         // Check here whether the number is among the drawn numbers
-        return false;
+        return this.numbers.contains(number);
     }
 }
-
+
