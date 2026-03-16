@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TodoDao {
 
-    private String databasePath;
+    private String databasePath; // jdbc url so it's whyere to find/create database file
 
     public TodoDao(String databasePath) {
         this.databasePath = databasePath;
@@ -18,8 +18,7 @@ public class TodoDao {
 
     public List<Todo> list() throws SQLException {
         List<Todo> todos = new ArrayList<>();
-        try (Connection connection = createConnectionAndEnsureDatabase();
-                ResultSet results = connection.prepareStatement("SELECT * FROM Todo").executeQuery()) {
+        try (Connection connection = createConnectionAndEnsureDatabase(); ResultSet results = connection.prepareStatement("SELECT * FROM Todo").executeQuery()) {//it selects all from the data base in createConnectionandensuredatabase method.
             while (results.next()) {
                 todos.add(new Todo(results.getInt("id"), results.getString("name"), results.getString("description"), results.getBoolean("done")));
             }

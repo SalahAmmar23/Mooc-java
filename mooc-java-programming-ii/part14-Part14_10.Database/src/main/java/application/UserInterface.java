@@ -1,6 +1,7 @@
 package application;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -30,6 +31,13 @@ public class UserInterface {
             }
 
             // implement the functionality here
+            if(command.equals("1")){
+                List<Todo> list = database.list();
+
+                for(Todo s : list){
+                    System.out.println(s);
+                }
+            }
         }
 
         System.out.println("Thank you!");
